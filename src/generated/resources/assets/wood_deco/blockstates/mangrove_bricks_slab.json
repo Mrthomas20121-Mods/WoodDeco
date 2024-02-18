@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wood_deco:block/mangrove_bricks_slab"
+    },
+    "type=double": {
+      "model": "wood_deco:block/mangrove_bricks"
+    },
+    "type=top": {
+      "model": "wood_deco:block/mangrove_bricks_slab_top"
+    }
+  }
+}
