@@ -45,5 +45,6 @@ public class WoodDeco {
 		// server providers
 		gen.addProvider(event.includeServer(), new WoodDecoLootGen(packOutput));
 		gen.addProvider(event.includeServer(), new WoodDecoTagsProvider(packOutput, lookupProvider, fileHelper));
+		gen.addProvider(event.includeServer(), new WoodDecoRecipeProvider(packOutput));
 	}
 }

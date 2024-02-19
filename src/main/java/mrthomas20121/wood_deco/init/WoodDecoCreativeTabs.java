@@ -1,10 +1,7 @@
 package mrthomas20121.wood_deco.init;
 
 import mrthomas20121.wood_deco.WoodDeco;
-import mrthomas20121.wood_deco.api.BlockType;
-import mrthomas20121.wood_deco.api.IWoodType;
-import mrthomas20121.wood_deco.api.MinecraftWoodType;
-import mrthomas20121.wood_deco.api.WoodTypeRegistry;
+import mrthomas20121.wood_deco.api.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -23,6 +20,11 @@ public class WoodDecoCreativeTabs {
                 for(IWoodType woodType: WoodTypeRegistry.getWoodTypes()) {
                     for(BlockType blockType: BlockType.values()) {
                         output.accept((WoodDecoBlocks.WOOD_BLOCKS.get(woodType).get(blockType).get()));
+                    }
+                    for(BlockType blockType: BlockType.values()) {
+                        BlockDecoration decoration = WoodDecoBlocks.WOOD_PART_BLOCKS.get(woodType).get(blockType);
+                        output.accept(decoration.slab().get());
+                        output.accept(decoration.stair().get());
                     }
                 }
             }).build());

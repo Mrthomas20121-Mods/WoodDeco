@@ -12,21 +12,30 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.List;
+
 public class WoodDecoBlockStateProvider extends BlockStateProvider {
+
+    private final List<IWoodType> types;
 
     public WoodDecoBlockStateProvider(PackOutput gen, ExistingFileHelper existingFileHelper) {
         super(gen, WoodDeco.MOD_ID, existingFileHelper);
+        this.types = WoodTypeRegistry.getWoodTypes();
+    }
+
+    public WoodDecoBlockStateProvider(PackOutput gen, ExistingFileHelper existingFileHelper, List<IWoodType> types) {
+        super(gen, WoodDeco.MOD_ID, existingFileHelper);
+        this.types = types;
     }
 
     @Override
     protected void registerStatesAndModels() {
-        for(IWoodType woodType : WoodTypeRegistry.getWoodTypes()) {
+        for(IWoodType woodType : this.types) {
             for(BlockType blockType: BlockType.values()) {
                 this.simpleBlock(WoodDecoBlocks.WOOD_BLOCKS.get(woodType).get(blockType).get());
                 BlockDecoration decoration = WoodDecoBlocks.WOOD_PART_BLOCKS.get(woodType).get(blockType);
-                ResourceLocation key = this.blockTexture(woodType.planks().get());
-                this.stairsBlock(decoration.stair().get(), key);
-                this.slabBlock(decoration.slab().get(), ForgeRegistries.BLOCKS.getKey(WoodDecoBlocks.WOOD_BLOCKS.get(woodType).get(blockType).get()), key);
+                this.stairsBlock(decoration.stair().get(), this.blockTexture(WoodDecoBlocks.WOOD_BLOCKS.get(woodType).get(blockType).get()));
+                this.slabBlock(decoration.slab().get(), this.blockTexture(WoodDecoBlocks.WOOD_BLOCKS.get(woodType).get(blockType).get()), this.blockTexture(WoodDecoBlocks.WOOD_BLOCKS.get(woodType).get(blockType).get()));
             }
         }
     }

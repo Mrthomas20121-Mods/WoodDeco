@@ -15,10 +15,20 @@ import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.List;
+
 public class WoodDecoItemModelProvider extends ItemModelProvider {
+
+    private final List<IWoodType> types;
+
+    public WoodDecoItemModelProvider(PackOutput generator, ExistingFileHelper existingFileHelper, List<IWoodType> types) {
+        super(generator, WoodDeco.MOD_ID, existingFileHelper);
+        this.types = types;
+    }
 
     public WoodDecoItemModelProvider(PackOutput generator, ExistingFileHelper existingFileHelper) {
         super(generator, WoodDeco.MOD_ID, existingFileHelper);
+        this.types = WoodTypeRegistry.getWoodTypes();
     }
 
     @Override
