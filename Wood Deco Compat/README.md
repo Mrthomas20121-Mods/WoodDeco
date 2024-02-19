@@ -1,2 +1,2 @@
-# WoodDeco
-Add new wood decorative blocks to minecraft.
+# WoodDecoCompat
+Add Compat between Wood Deco and other mods.
