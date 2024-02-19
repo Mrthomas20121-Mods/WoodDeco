@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wood_deco:block/spruce_tile_slab"
+    },
+    "type=double": {
+      "model": "wood_deco:block/spruce_tile"
+    },
+    "type=top": {
+      "model": "wood_deco:block/spruce_tile_slab_top"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "X": {
+      "item": "minecraft:stick"
+    },
+    "Y": {
+      "item": "minecraft:birch_planks"
+    }
+  },
+  "pattern": [
+    "YXY",
+    "X X",
+    "YXY"
+  ],
+  "result": {
+    "count": 4,
+    "item": "wood_deco:polished_birch_planks"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "X": {
+      "item": "minecraft:stick"
+    },
+    "Y": {
+      "item": "minecraft:dark_oak_planks"
+    }
+  },
+  "pattern": [
+    "YXY",
+    "X X",
+    "YXY"
+  ],
+  "result": {
+    "count": 4,
+    "item": "wood_deco:polished_dark_oak_planks"
+  },
+  "show_notification": true
+}

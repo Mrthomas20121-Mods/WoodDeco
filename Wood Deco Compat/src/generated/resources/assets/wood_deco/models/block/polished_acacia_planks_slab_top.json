@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "wood_deco:block/polished_acacia_planks",
+    "side": "wood_deco:block/polished_acacia_planks",
+    "top": "wood_deco:block/polished_acacia_planks"
+  }
+}

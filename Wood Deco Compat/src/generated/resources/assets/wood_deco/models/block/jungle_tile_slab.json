@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "wood_deco:block/jungle_tile",
+    "side": "wood_deco:block/jungle_tile",
+    "top": "wood_deco:block/jungle_tile"
+  }
+}

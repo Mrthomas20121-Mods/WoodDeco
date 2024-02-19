@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "wood_deco:crafting/warped_tile"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_warped_tile": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "wood_deco:warped_tile"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_warped_tile",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "wood_deco:crafting/warped_tile"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "wood_deco:block/acacia_tile",
+    "side": "wood_deco:block/acacia_tile",
+    "top": "wood_deco:block/acacia_tile"
+  }
+}

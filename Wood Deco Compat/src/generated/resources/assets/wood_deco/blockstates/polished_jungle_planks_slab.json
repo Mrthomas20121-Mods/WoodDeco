@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wood_deco:block/polished_jungle_planks_slab"
+    },
+    "type=double": {
+      "model": "wood_deco:block/polished_jungle_planks"
+    },
+    "type=top": {
+      "model": "wood_deco:block/polished_jungle_planks_slab_top"
+    }
+  }
+}
