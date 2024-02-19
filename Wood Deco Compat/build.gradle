@@ -4,8 +4,8 @@ plugins {
 }
 
 version = mod_version
-group = 'mrthomas20121.wood_deco_quark'
-archivesBaseName = 'Wood Deco Quark'
+group = 'mrthomas20121.wood_deco_compat'
+archivesBaseName = 'Wood Deco Compat'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -24,7 +24,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                wood_deco_quark {
+                wood_deco_compat {
                     source sourceSets.main
                 }
             }
@@ -41,7 +41,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                wood_deco_quark {
+                wood_deco_compat {
                     source sourceSets.main
                 }
             }
@@ -57,10 +57,10 @@ minecraft {
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
-            args '--mod', 'wood_deco_quark', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'wood_deco_compat', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                wood_deco_quark {
+                wood_deco_compat {
                     source sourceSets.main
                 }
             }
@@ -120,12 +120,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "Wood Deco Quark",
+            "Specification-Title": "Wood Deco Compat",
             "Specification-Vendor": "Mrthomas20121",
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
             "Implementation-Version": project.version,
-            "Implementation-Vendor" : "wood_deco_quark",
+            "Implementation-Vendor" : "wood_deco_compat",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
